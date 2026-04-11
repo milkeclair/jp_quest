@@ -5,6 +5,7 @@ require_relative "modpack_localizer/util/version"
 require_relative "modpack_localizer/util/help"
 require_relative "modpack_localizer/snbt/performer"
 require_relative "modpack_localizer/jar/performer"
+require_relative "modpack_localizer/quest_giver/performer"
 
 # SNBT形式のファイルを翻訳する
 # 翻訳できるプロパティ
@@ -25,6 +26,7 @@ module ModpackLocalizer
     performers << ModpackLocalizer::JAR::Performer.new(
       language:, country:, locale_code:, display_help: false
     )
+    performers << ModpackLocalizer::QuestGiver::Performer.new(language:, display_help: false)
 
     if threadable
       threads = performers.map { Thread.new { it.perform_directory(loggable: false) } }
