@@ -9,6 +9,7 @@ Can always get help with `ModpackLocalizer.help`
 
 `ModpackLocalizer::SNBT::Performer.new(language: "English")`  
 `ModpackLocalizer::JAR::Performer.new(language: "English")`  
+`ModpackLocalizer::QuestGiver::Performer.new(language: "English")`  
 or if no specific configs required  
 `ModpackLocalizer.omakase(language: "English")`
 
@@ -19,8 +20,9 @@ or if no specific configs required
 3. Add your API keys to `.env` file [see](https://github.com/milkeclair/translation_api)
 4. Add `some.snbt` or `quests` directory contents to `quests` directory
 5. Add `some.jar` files to `mods` directory
-6. Double click `start.bat` file
-7. Check `output` directory
+6. Add `some.json` files to `quest_giver` directory
+7. Double click `start.bat` file
+8. Check `output` directory
 
 ## Options for omakase method
 
